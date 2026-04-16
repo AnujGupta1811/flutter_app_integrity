@@ -1,7 +1,7 @@
 name: flutter_app_integrity
 description: A Flutter plugin to detect rooted/jailbroken devices, emulators, debuggers, and app tampering on Android and iOS.
 version: 0.0.1
-homepage: https://github.com/yourusername/flutter_app_integrity
+homepage: https://github.com/AnujGupta1811/flutter_app_integrity.git
  
 environment:
   sdk: ">=3.0.0 <4.0.0"

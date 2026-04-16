@@ -1,6 +1,6 @@
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
-import 'flutter_app_integrity_method_channel.dart';
+import 'package:flutter_app_integrity/flutter_app_integrity_method_channel.dart';
 
 abstract class FlutterAppIntegrityPlatform extends PlatformInterface {
   /// Constructs a FlutterAppIntegrityPlatform.
@@ -8,7 +8,8 @@ abstract class FlutterAppIntegrityPlatform extends PlatformInterface {
 
   static final Object _token = Object();
 
-  static FlutterAppIntegrityPlatform _instance = MethodChannelFlutterAppIntegrity();
+  static FlutterAppIntegrityPlatform _instance =
+      MethodChannelFlutterAppIntegrity();
 
   /// The default instance of [FlutterAppIntegrityPlatform] to use.
   ///

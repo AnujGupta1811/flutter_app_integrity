@@ -2,6 +2,14 @@ import 'package:flutter/services.dart';
 
 /// Result of a full integrity check.
 class AppIntegrityResult {
+  const AppIntegrityResult({
+    required this.isRooted,
+    required this.isEmulator,
+    required this.isDebuggerAttached,
+    required this.isAppTampered,
+    required this.isDeveloperOptionsEnabled,
+  });
+
   /// True if the device is rooted (Android) or jailbroken (iOS).
   final bool isRooted;
 
@@ -16,14 +24,6 @@ class AppIntegrityResult {
 
   /// True if developer options are enabled (Android only).
   final bool isDeveloperOptionsEnabled;
-
-  const AppIntegrityResult({
-    required this.isRooted,
-    required this.isEmulator,
-    required this.isDebuggerAttached,
-    required this.isAppTampered,
-    required this.isDeveloperOptionsEnabled,
-  });
 
   /// Returns true if ANY integrity check has failed.
   bool get isThreatDetected =>
@@ -61,7 +61,7 @@ class FlutterAppIntegrity {
 
   /// Runs all integrity checks and returns a full [AppIntegrityResult].
   static Future<AppIntegrityResult> checkIntegrity() async {
-    final result = await _channel.invokeMethod<Map>('checkIntegrity');
+    var result = await _channel.invokeMethod<Map<dynamic, dynamic>>('checkIntegrity');
     return AppIntegrityResult.fromMap(result!);
   }
 

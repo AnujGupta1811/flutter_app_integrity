@@ -38,6 +38,9 @@ linter:
     - avoid_bool_literals_in_conditional_expressions
     - avoid_catches_without_on_clauses
     - avoid_catching_errors
+    # Disabled: Flutter plugins conventionally use
+    # static-only classes for their public API.
+    # - avoid_classes_with_only_static_members
     - avoid_double_and_int_checks
     - avoid_empty_else
     - avoid_equals_and_hash_code_on_mutable_classes
@@ -153,6 +156,8 @@ linter:
     - unnecessary_brace_in_string_interps
     - unnecessary_const
     - unnecessary_constructor_name
+    # Disabled: conflicts with prefer_final_locals.
+    # - unnecessary_final
     - unnecessary_getters_setters
     - unnecessary_lambdas
     - unnecessary_late

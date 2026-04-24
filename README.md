@@ -114,3 +114,17 @@ Pull requests are welcome! Please open an issue first to discuss major changes.
 ## License
 
 MIT
+
+flutter setup guide 
+
+# 1. Clone the repository
+git clone https://github.com/AnujGupta1811/flutter_app_integrity.git
+
+# 2. Navigate to project directory
+cd flutter_app_integrity
+
+# 3. Install dependencies
+flutter pub get
+
+# 4. Check Flutter setup
+flutter doctor
